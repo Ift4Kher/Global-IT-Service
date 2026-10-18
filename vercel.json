@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:css",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/api/health", "destination": "/api/health" },
+    { "source": "/api/services", "destination": "/api/services" },
+    { "source": "/api/services/:slug", "destination": "/api/services/[slug]" },
+    { "source": "/api/contact", "destination": "/api/contact" },
+    { "source": "/api/newsletter", "destination": "/api/newsletter" },
+    { "source": "/((?!api|assets|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, immutable" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}
