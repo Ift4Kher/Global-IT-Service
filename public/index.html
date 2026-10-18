@@ -145,6 +145,8 @@
           class="w-full h-full object-cover object-center"
           fetchpriority="high"
         >
+        <!-- Soft readability gradient: keeps background image sharp while guaranteeing text legibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/30 to-white/65"></div>
       </div>
 
       <!-- Layer 1: High-Tech Linear Grid & Dot Matrix Overlay -->
@@ -241,26 +243,26 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          <!-- Left Content Column -->
-          <div class="sm:col-span-6 space-y-6 sm:space-y-7 min-w-0">
+          <!-- Left Content Column with mobile frosted glass panel for maximum readability -->
+          <div class="sm:col-span-6 space-y-6 sm:space-y-7 min-w-0 bg-white/75 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-5 sm:p-0 rounded-3xl border border-white/80 sm:border-0 shadow-xl sm:shadow-none">
             
             <!-- Modern Eyebrow pill with live radar dot -->
             <div>
-              <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-50/90 border border-blue-200/80 shadow-sm backdrop-blur-sm">
+              <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-blue-50 border border-blue-200/90 shadow-sm backdrop-blur-sm">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 radar-dot shrink-0" aria-hidden="true"></span>
-                <span class="text-xs font-bold tracking-widest text-brand-blue uppercase">NEXT-GEN IT SERVICES &amp; SOLUTIONS</span>
+                <span class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">NEXT-GEN IT SERVICES &amp; SOLUTIONS</span>
                 <span class="hidden sm:inline-block w-1 h-1 rounded-full bg-slate-300"></span>
                 <span class="hidden sm:inline-block text-[11px] font-semibold text-slate-500">2026 Enterprise Ready</span>
               </div>
             </div>
 
             <!-- Headline H1 with larger scale and rich gradient text highlight -->
-            <h1 class="text-3xl sm:text-4xl md:text-3xl lg:text-[3.5rem] xl:text-[4rem] font-extrabold text-brand-navy leading-[1.12] tracking-tight [text-shadow:_0_1px_12px_rgba(255,255,255,0.9)] sm:[text-shadow:none]">
-              Technology That Moves <br class="hidden sm:inline">Your Business <span class="bg-gradient-to-r from-brand-blue via-blue-600 to-cyan-500 bg-clip-text text-transparent drop-shadow-sm">Forward</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-slate-950 leading-tight tracking-tight">
+              Technology That Moves <br class="hidden sm:inline">Your Business <span class="bg-gradient-to-r from-brand-blue to-blue-700 bg-clip-text text-transparent">Forward</span>
             </h1>
 
-            <!-- Supporting description with improved readability -->
-            <p class="text-base sm:text-lg md:text-base lg:text-xl text-slate-900 sm:text-slate-600 leading-relaxed max-w-xl font-medium sm:font-normal [text-shadow:_0_1px_10px_rgba(255,255,255,0.95),_0_0_4px_rgba(255,255,255,0.9)] sm:[text-shadow:none]">
+            <!-- Supporting description with maximum readability -->
+            <p class="text-base sm:text-lg md:text-base lg:text-xl text-slate-900 sm:text-slate-700 leading-relaxed max-w-xl font-medium sm:font-normal">
               We provide managed IT services, cloud solutions, security and strategic support to help your business stay secure, efficient and ready for what's next.
             </p>
 
