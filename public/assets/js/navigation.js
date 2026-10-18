@@ -23,13 +23,13 @@
       if (willOpen) {
         mobileMenu.classList.remove('hidden');
         mobileToggle.setAttribute('aria-expanded', 'true');
-        iconBars.classList.add('hidden');
-        iconClose.classList.remove('hidden');
+        iconBars.style.setProperty('display', 'none', 'important');
+        iconClose.style.setProperty('display', 'inline-block', 'important');
       } else {
         mobileMenu.classList.add('hidden');
         mobileToggle.setAttribute('aria-expanded', 'false');
-        iconBars.classList.remove('hidden');
-        iconClose.classList.add('hidden');
+        iconBars.style.setProperty('display', 'inline-block', 'important');
+        iconClose.style.setProperty('display', 'none', 'important');
       }
     }
 
