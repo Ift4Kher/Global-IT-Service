@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
+    <defs>
+      <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0066FF"/>
+        <stop offset="50%" stop-color="#00A3FF"/>
+        <stop offset="100%" stop-color="#00D2FF"/>
+      </linearGradient>
+      <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#0066FF" stop-opacity="0.2"/>
+        <stop offset="100%" stop-color="#00A3FF" stop-opacity="0.9"/>
+      </linearGradient>
+      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+      </filter>
+    </defs>
+    <!-- Emblem -->
+    <g transform="translate(6, 6)">
+      <circle cx="24" cy="24" r="22" stroke="url(#orbitGrad)" stroke-width="2.5" stroke-dasharray="32 10" fill="#0A192F" />
+      <circle cx="24" cy="24" r="16" fill="#0F2448" />
+      <!-- Stylized 'G' icon with tech connectivity -->
+      <path d="M24 13 A11 11 0 1 0 33 28 L24 28 L24 24 L35 24 A13 13 0 1 1 24 11 Z" fill="url(#logoGrad)" filter="url(#glow)"/>
+      <circle cx="24" cy="24" r="3.5" fill="#FFFFFF" />
+      <!-- Orbital satellite nodes -->
+      <circle cx="38" cy="14" r="2.5" fill="#00D2FF" />
+      <circle cx="10" cy="34" r="2" fill="#0066FF" />
+    </g>
+    <!-- Brand Name Text -->
+    <text x="64" y="29" font-family="Inter, system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" fill="#0F172A" letter-spacing="-0.5">Global IT</text>
+    <text x="64" y="44" font-family="Inter, system-ui, -apple-system, sans-serif" font-weight="500" font-size="9" fill="#64748B" letter-spacing="0.4">Technology for a Better Tomorrow</text>
+  </svg>
