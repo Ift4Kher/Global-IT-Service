@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    color: #0A192F;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #0066FF;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-white bg-brand-blue rounded-full hover:bg-brand-hover shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-brand-navy bg-white border border-slate-200 rounded-full hover:border-brand-blue hover:text-brand-blue hover:bg-brand-light/30 shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-slate-300;
+  }
+
+  /* Badge Eyebrow Label */
+  .eyebrow-badge {
+    @apply inline-block text-xs font-bold tracking-widest text-brand-blue uppercase mb-3;
+  }
+
+  /* Service Card styling matching screenshot */
+  .service-card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col overflow-hidden transform hover:-translate-y-1.5;
+  }
+
+  /* Subtle card icon badge */
+  .service-icon-badge {
+    @apply w-12 h-12 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center shadow-sm border border-blue-100/60 transition-transform duration-300 group-hover:scale-110 group-hover:bg-brand-blue group-hover:text-white;
+  }
+
+  /* Navigation Link */
+  .nav-link {
+    @apply relative text-sm font-medium text-slate-700 hover:text-brand-blue py-1 transition-colors duration-200;
+  }
+
+  .nav-link.active {
+    @apply text-brand-navy font-semibold;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    @apply absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-brand-blue rounded-full;
+  }
+
+  /* Process Step Card */
+  .process-step {
+    @apply relative flex flex-col items-center text-center p-4 transition-transform duration-300;
+  }
+
+  /* Form Input */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-900 text-sm placeholder-slate-400 focus:bg-white focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 transition-all outline-none;
+  }
+}
+
+/* Animations & Visual Effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatDelayed {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatDelayed 6s ease-in-out infinite 1.5s;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 7s ease-in-out infinite;
+}
+
+.radar-dot {
+  animation: radarPulse 2s infinite;
+}
+
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 35s linear infinite;
+}
+
+/* Subtle modern dot matrix background */
+.bg-tech-grid {
+  background-image: radial-gradient(rgba(0, 102, 255, 0.12) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+}
+
+/* Modern linear grid pattern */
+.bg-linear-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Glassmorphic card styling */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
